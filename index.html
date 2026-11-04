@@ -84,7 +84,7 @@
    <main>
  
  <button id="shareLinkedinBtn" class="share-btn">
-    <img src="linkedin.png" alt="LinkedIn">
+    <img src="LBS_articulos.png" alt="LinkedIn">
     Compartir
 </button>
 
@@ -162,7 +162,17 @@
 
 <script src="JS/header.js"></script> 
  <script src="JS/index.js"></script> 
+<script>
+    document.getElementById("shareLinkedinBtn").addEventListener("click", () => {
 
+    const articleUrl = encodeURIComponent(window.location.href);
+
+    const linkedinUrl =
+        `https://www.linkedin.com/sharing/share-offsite/?url=${articleUrl}`;
+
+    window.open(linkedinUrl, "_blank");
+});
+</script>
 
 </body>
 </html>
